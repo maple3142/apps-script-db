@@ -10,6 +10,7 @@ const store = new Vuex.Store({
 		url: '',
 		db: null,
 		data: [],
+		urls: [],
 		loading: false
 	},
 	mutations: {
