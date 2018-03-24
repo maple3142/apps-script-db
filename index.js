@@ -17,19 +17,11 @@ module.exports = class AppsScriptDB {
 			return d
 		}
 	}
-	tryParse(t) {
-		try {
-			return JSON.parse(t)
-		} catch (e) {}
-		return t
-	}
 	get(key = '*') {
 		return axios
 			.get(this.url, { params: { key } })
 			.then(r => r.data)
 			.then(log('get'))
-			.then(this.tryParse)
-			.then(log('get:parsed'))
 	}
 	set(key, value) {
 		if (typeof key !== 'string' || typeof value === 'undefined') {
