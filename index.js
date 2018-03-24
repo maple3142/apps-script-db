@@ -19,16 +19,16 @@ module.exports = class AppsScriptDB {
 	}
 	get(key = '*') {
 		return axios
-			.get(this.url, { params: { key } })
+			.get(this.url, { params: { key }, transformResponse: r => r })
 			.then(r => r.data)
 			.then(log('get'))
 	}
 	set(key, value) {
-		if (typeof key !== 'string' || typeof value === 'undefined') {
-			throw new TypeError('key should be string,value shouldn\'t be null.')
+		if (typeof key !== 'string' || typeof value !== 'string') {
+			throw new TypeError('key,value should be string.')
 		}
 		return axios
-			.post(this.url, qs.stringify({ key, value: JSON.stringify(value) }))
+			.post(this.url, qs.stringify({ key, value }))
 			.then(r => r.data)
 			.then(log('set'))
 			.then(this.resultHandler('set'))
