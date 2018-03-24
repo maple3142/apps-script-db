@@ -5,7 +5,7 @@
 ## Get Database Url
 
 1. Go to [https://script.google.com/home](https://script.google.com/home)
-2. Create a script with content of `db.js` file and save with any project name you wants
+2. Create a script with content of [db.js](https://github.com/maple3142/apps-script-db/blob/master/db.js) file and save with any project name you wants
 3. Click "Publish" -> "Deploy as web app..."
 4. Set "Who has access to the app:" to "Anyone, even anonymous"
 5. Click "Deploy" and get the url

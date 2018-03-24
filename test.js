@@ -11,7 +11,7 @@ describe('test', function() {
 		;(await db.get('test')).should.deepEqual({ a: 5 })
 	})
 	it('del', async function() {
-		this.timeout = 20000
+		this.timeout(20000)
 		await db.del('*')
 		;(await db.get()).should.deepEqual({})
 	})

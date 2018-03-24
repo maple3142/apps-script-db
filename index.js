@@ -7,12 +7,19 @@ module.exports = class AppsScriptDB {
 	}
 	resultHandler(t) {
 		return r => {
-			if (!r.data || r.data.msg === 'error') throw new Error(`Failed to ${t}`)
+			if (r.data === 'error') throw new Error(`Failed to ${t}`)
 			return r.data
 		}
 	}
+	tryParse(t){
+		try{
+			return JSON.parse(t)
+		}
+		catch(e){}
+		return t
+	}
 	get(key = '*') {
-		return axios.get(this.url, { params: { key } }).then(r => r.data)
+		return axios.get(this.url, { params: { key } }).then(r => r.data).then(this.tryParse)
 	}
 	set(key, value) {
 		if (typeof key !== 'string' || typeof value === 'undefined') {
