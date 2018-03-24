@@ -11,6 +11,7 @@
 	"dependencies": {
 		"apps-script-db": "^0.3.0",
 		"bootstrap": "^4.0.0",
+		"vue-i18n": "^7.6.0",
 		"vuejs-storage": "^2.2.4",
 		"vuex": "^3.0.1"
 	},

@@ -1,11 +1,11 @@
 <template>
 	<div class="row">
 		<div class="col-12">
-			<x-input v-model="v">
+			<x-input v-model="v" @enter="update">
 				<span slot="prepend" class="input-group-text">{{k}}</span>
 				<div slot="append" class="input-group-append">
-					<button class="btn btn-primary" @click="update">Update</button>
-					<button class="btn btn-danger" @click="del">Delete</button>
+					<button class="btn btn-primary" @click="update">{{$t('update')}}</button>
+					<button class="btn btn-danger" @click="del">{{$t('delete')}}</button>
 				</div>
 			</x-input>
 		</div>
@@ -30,6 +30,7 @@ export default {
 	methods: {
 		update() {
 			if (!this.k || !this.v) return
+			if (this.v === this.data.value) return // Nothing change
 			this.$store.dispatch('SET_VALUE', { key: this.k, value: this.v })
 		},
 		del() {

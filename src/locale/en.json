@@ -1,0 +1,9 @@
+{
+	"appname": "Apps Script DB",
+	"editor": "Editor",
+	"load": "Load",
+	"add": "Add",
+	"update": "Update",
+	"delete": "Delete",
+	"dburl": "Database Url"
+}

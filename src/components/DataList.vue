@@ -4,7 +4,7 @@
 			<key-value :class="{'pt-2':idx>0}" v-for="(d,idx) in data" :key="d.key" :data="d"/>
 			<div class="row pt-2">
 				<div class="col-12">
-					<button class="btn btn-primary w-100" @click="add">Add</button>
+					<button class="btn btn-primary w-100" @click="add">{{$t('add')}}</button>
 				</div>
 			</div>
 		</div>

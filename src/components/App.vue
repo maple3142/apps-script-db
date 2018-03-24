@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row pt-2">
 			<div class="col-12">
-				<h1 class="pr-2"><a href="https://github.com/maple3142/apps-script-db" target="_blank">Apps Script DB</a> Editor</h1>
+				<h1 class="pr-2"><a href="https://github.com/maple3142/apps-script-db" target="_blank">{{$t('appname')}}</a> {{$t('editor')}}</h1>
 				<loading :loading="loading"/>
 			</div>
 		</div>
