@@ -34,10 +34,10 @@ Set the value of `key` to `value`
 
 Get the value of `key`
 
-> if key==='*', it will return an object of all values
+> if `key==='*'`, it will return an object of all values
 
 ### `db.del(key: string)`
 
 Delete the value of `key`
 
-> if key==='*', it will **delete every things**
+> if `key==='*'`, it will **delete every things**
