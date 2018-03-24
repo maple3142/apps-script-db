@@ -16,7 +16,7 @@
 
 ```javascript
 const ADB = require('apps-script-db')
-const db = new ADB(process.env.ADB_URL)
+const db = new ADB(YOUR_DATABASE_URL)
 
 (async ()=>{
   await db.set('key',{a: 5})
