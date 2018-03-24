@@ -1,5 +1,7 @@
 # Apps Script DB
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/maple3142/apps-script-db.svg)](https://greenkeeper.io/)
+
 > A module to prodive a simple key-value based database by [Google Apps Script](https://developers.google.com/apps-script/)
 
 ## Get Database Url
