@@ -1,2 +1,0 @@
-webpackJsonp([0],{72:function(p,e){p.exports={appname:"Apps Script DB",editor:"編輯器",load:"載入",add:"新增",update:"更新",delete:"刪除",dburl:"資料庫網址"}}});
-//# sourceMappingURL=lang-zh-tw-json.cf82389c.chunk.js.map
