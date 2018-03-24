@@ -5,5 +5,9 @@
 	"add": "Add",
 	"update": "Update",
 	"delete": "Delete",
-	"dburl": "Database Url"
+	"dburl": "Database Url",
+	"copy": {
+		"success": "Copied!",
+		"failed": "Copy failed! Please copy the following url."
+	}
 }
