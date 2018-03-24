@@ -29,7 +29,7 @@ export default {
 		copy(url) {
 			const { protocol, hostname, port, pathname } = location
 			let ar = [protocol, '//', hostname]
-			if (port !== 80) ar = ar.concat([':', port])
+			if (port !== 80 || port !== '') ar = ar.concat([':', port])
 			ar = ar.concat([pathname], '?url=', encodeURIComponent(url))
 			const str = ar.join('')
 			const r = copy(str)
