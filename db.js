@@ -2,7 +2,7 @@ function doGet(e) {
 	const P = PropertiesService.getScriptProperties()
 	const type = e.parameter.type
 	const key = e.parameter.key
-	if (!key || key === '*') {
+	if (typeof key !== 'undefined' || key === '*') {
 		Logger.log('Get: *')
 		return reply(JSON.stringify(P.getProperties()))
 	} else {
@@ -15,12 +15,12 @@ function doPost(e) {
 	const key = e.parameter.key
 	const value = e.parameter.value
 	const del = e.parameter.del
-	if (del) {
+	if (typeof del !== 'undefined') {
 		Logger.log('Delete: %s', del)
 		if (del === '*') P.deleteAllProperties()
 		else P.deleteProperty(del)
 		return reply('success')
-	} else if (key && value) {
+	} else if (typeof key !== 'undefined' && typeof value !== 'undefined') {
 		Logger.log('Set: %s=%s', key, value)
 		P.setProperty(key, value)
 		return reply('success')
