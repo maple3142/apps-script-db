@@ -1,8 +1,21 @@
 {
-  "name": "apps-script-db",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/maple3142/apps-script-db.git",
-  "author": "maple3142 <kirby741852963@gmail.com>",
-  "license": "MIT"
+	"name": "apps-script-db-webui",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/maple3142/apps-script-db.git",
+	"author": "maple3142 <kirby741852963@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"poi": "^9.6.13"
+	},
+	"dependencies": {
+		"apps-script-db": "^0.3.0",
+		"bootstrap": "^4.0.0",
+		"vuejs-storage": "^2.2.4",
+		"vuex": "^3.0.1"
+	},
+	"scripts": {
+		"dev": "poi",
+		"build": "poi build"
+	}
 }
