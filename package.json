@@ -1,0 +1,8 @@
+{
+  "name": "apps-script-db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/maple3142/apps-script-db.git",
+  "author": "maple3142 <kirby741852963@gmail.com>",
+  "license": "MIT"
+}
