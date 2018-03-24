@@ -24,6 +24,12 @@ const db = new ADB(YOUR_DATABASE_URL)
 })()
 ```
 
+## UI Database Editor
+
+Url: [https://maple3142.github.io/apps-script-db/](https://maple3142.github.io/apps-script-db/)
+
+The web app is on branch [`webui`](https://github.com/maple3142/apps-script-db/tree/webui), based on Vue.
+
 ## API
 
 ### `db.set(key: string,value: any)`
