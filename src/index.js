@@ -11,13 +11,9 @@ if (query.url) {
 	store.commit('UPDATE_URL', { url: query.url })
 }
 if (store.state.url) {
-	store.dispatch('GET_DATA').catch(() => {
-		store.commit('STOP_LOADING')
-		store.commit('UPDATE_DATA', { data: [] })
-		alert('Not a database url!')
-	})
+	store.dispatch('GET_DATA')
 }
-console.log(query)
+
 new Vue({
 	el: '#app',
 	render: h => h(App),

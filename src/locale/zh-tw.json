@@ -1,4 +1,5 @@
 {
+	"appname": "Apps Script DB",
 	"editor": "編輯器",
 	"load": "載入",
 	"add": "新增",
@@ -8,5 +9,9 @@
 	"copy": {
 		"success": "複製成功!",
 		"failed": "複製失敗!請手動複製下方網址。"
+	},
+	"key": {
+		"add": "Key:",
+		"duplicate": "Key \"{key}\" 重複了!"
 	}
 }

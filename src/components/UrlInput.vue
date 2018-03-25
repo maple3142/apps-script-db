@@ -20,16 +20,12 @@ export default {
 	methods: {
 		update(url) {
 			this.$store.commit('UPDATE_URL', { url })
-			this.$store.dispatch('GET_DATA').catch(() => {
-				this.$store.commit('STOP_LOADING')
-				this.$store.commit('UPDATE_DATA', { data: [] })
-				alert('Not a database url!')
-			})
+			this.$store.dispatch('GET_DATA')
 		},
 		copy(url) {
 			const { protocol, hostname, port, pathname } = location
 			let ar = [protocol, '//', hostname]
-			if (port !== 80 || port !== '') ar = ar.concat([':', port])
+			if (port !== 80 && port !== '') ar = ar.concat([':', port])
 			ar = ar.concat([pathname], '?url=', encodeURIComponent(url))
 			const str = ar.join('')
 			const r = copy(str)

@@ -9,5 +9,9 @@
 	"copy": {
 		"success": "Copied!",
 		"failed": "Copy failed! Please copy the following url."
+	},
+	"key": {
+		"add": "Key:",
+		"duplicate": "Key \"{key}\" already exists."
 	}
 }

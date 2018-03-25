@@ -8,8 +8,9 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
 	state: {
 		url: '',
-		data: [],
-		loading: false
+		data: null,
+		loading: false,
+		success: false
 	},
 	mutations: {
 		UPDATE_URL: (state, { url }) => {
@@ -17,22 +18,30 @@ const store = new Vuex.Store({
 		},
 		UPDATE_DATA: (state, { data }) => (state.data = data),
 		START_LOADING: state => (state.loading = true),
-		STOP_LOADING: state => (state.loading = false)
+		STOP_LOADING: state => (state.loading = false),
+		SUCCESS: state => (state.success = true),
+		FAILED: state => (state.success = false)
 	},
 	actions: {
 		async GET_DATA({ commit, state }) {
 			if (!state.url) return
-			const db = new ADB(state.url)
+			const db = new ADB(state.url, window.fetch.bind(window))
 			commit('START_LOADING')
-			const data = JSON.parse(await db.get('*'))
-
-			commit('UPDATE_DATA', {
-				data: Object.keys(data).map(key => ({
-					key,
-					value: data[key]
-				}))
-			})
-			commit('STOP_LOADING')
+			try {
+				const data = JSON.parse(await db.get('*'))
+				commit('UPDATE_DATA', {
+					data: Object.keys(data).map(key => ({
+						key,
+						value: data[key]
+					}))
+				})
+			} catch (e) {
+				commit('STOP_LOADING')
+				commit('UPDATE_DATA', { data: null })
+				return
+			} finally {
+				commit('STOP_LOADING')
+			}
 		},
 		async SET_VALUE({ commit, dispatch, state }, { key, value }) {
 			if (!state.url) return
@@ -50,12 +59,6 @@ const store = new Vuex.Store({
 			commit('STOP_LOADING')
 			dispatch('GET_DATA')
 		}
-	},
-	plugins: [
-		vjss({
-			namespace: 'store',
-			keys: ['url']
-		})
-	]
+	}
 })
 export default store
