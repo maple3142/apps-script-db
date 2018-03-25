@@ -1,2 +1,0 @@
-webpackJsonp([0],{76:function(e,d){e.exports={editor:"編輯器",load:"載入",add:"新增",update:"更新",delete:"刪除",dburl:"資料庫網址",copy:{success:"複製成功!",failed:"複製失敗!請手動複製下方網址。"}}}});
-//# sourceMappingURL=lang-zh-tw-json.afa63b11.chunk.js.map
