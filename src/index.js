@@ -8,7 +8,6 @@ export default class AppsScriptDB {
 	handleResult(t) {
 		return d => {
 			if (d === 'error') throw new Error(`Failed to ${t}`)
-			return d
 		}
 	}
 	_stringify(data) {
