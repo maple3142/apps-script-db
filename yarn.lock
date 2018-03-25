@@ -152,9 +152,9 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-apps-script-db@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/apps-script-db/-/apps-script-db-0.4.3.tgz#7ace8cf1b8a83130461addc46a6e0e4584956a7b"
+apps-script-db@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/apps-script-db/-/apps-script-db-0.4.4.tgz#eb375db790eea7e5a59a92dc3da19c6257e02812"
 
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"

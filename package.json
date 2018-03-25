@@ -9,7 +9,7 @@
 		"poi": "^9.6.13"
 	},
 	"dependencies": {
-		"apps-script-db": "^0.4.3",
+		"apps-script-db": "^0.4.4",
 		"bootstrap": "^4.0.0",
 		"vue-i18n": "^7.6.0",
 		"vuejs-storage": "^2.2.4",
