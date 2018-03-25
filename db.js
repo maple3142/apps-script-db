@@ -2,10 +2,10 @@ function doGet(e) {
 	const P = PropertiesService.getScriptProperties()
 	const type = e.parameter.type
 	const key = e.parameter.key
-	if (typeof key !== 'undefined' || key === '*') {
+	if (key === '*') {
 		Logger.log('Get: *')
 		return reply(JSON.stringify(P.getProperties()))
-	} else {
+	} else if (typeof key !== 'undefined') {
 		Logger.log('Get: %s', key)
 		return reply(P.getProperty(key))
 	}

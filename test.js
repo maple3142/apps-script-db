@@ -1,8 +1,10 @@
 const ADB = require('./')
 const should = require('should')
+const fetch = require('node-fetch')
 
 if (!process.env.ADB_URL) throw new Error('Please set process.env.ADB_URL a db url')
-const db = new ADB(process.env.ADB_URL)
+
+const db = new ADB(process.env.ADB_URL, fetch)
 describe('test', function() {
 	it('set', async function() {
 		await db.set('test', JSON.stringify({ a: 5 }))
