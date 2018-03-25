@@ -1,5 +1,5 @@
 export default class AppsScriptDB {
-	constructor(url, fetch = window.fetch) {
+	constructor(url, fetch = window.fetch.bind(window)) {
 		if (typeof url !== 'string' || typeof fetch !== 'function')
 			throw new TypeError('url should be string,fetch should be whatwg-fetch.')
 		this.url = url
