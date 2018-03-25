@@ -12,16 +12,28 @@
 
 ## Usage
 
+### Node
+
 > `npm i --save apps-script-db`
 
 ```javascript
 const ADB = require('apps-script-db')
-const db = new ADB(YOUR_DATABASE_URL)
+const fetch = require('node-fetch')
+const db = new ADB(YOUR_DATABASE_URL, fetch)
 
 (async ()=>{
-  await db.set('key',{a: 5})
+  await db.set('key', {a: 5})
   await db.get('key') //{a: 5}
 })()
+```
+
+### Browser
+
+```html
+<script src="https://unpkg.com/apps-script-db"></script>
+<script>
+const db = new ADB(YOUR_DATABASE_URL)
+</script>
 ```
 
 ## UI Database Editor
