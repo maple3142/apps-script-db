@@ -1,6 +1,6 @@
 {
 	"name": "apps-script-db",
-	"version": "0.4.3",
+	"version": "0.4.4",
 	"main": "dist/apps-script-db.cjs.js",
 	"browser": "dist/apps-script-db.min.js",
 	"module": "dist/apps-script-db.es.js",
