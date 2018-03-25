@@ -12,7 +12,7 @@ export default class AppsScriptDB {
 	}
 	_stringify(data) {
 		return Object.keys(data)
-			.map(k => `${k}=${data[k]}`)
+			.map(k => `${k}=${encodeURIComponent(data[k])}`)
 			.join('&')
 	}
 	_GET(url, data) {
