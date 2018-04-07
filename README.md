@@ -44,7 +44,7 @@ The web app is on branch [`webui`](https://github.com/maple3142/apps-script-db/t
 
 ## API
 
-### `db.set(key: string, value: any)`
+### `db.set(key: string, value: string)`
 
 Set the value of `key` to `value`
 
