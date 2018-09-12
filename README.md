@@ -1,4 +1,6 @@
 # Apps Script DB
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmaple3142%2Fapps-script-db.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmaple3142%2Fapps-script-db?ref=badge_shield)
+
 
 > A module to provide a simple key-value based database by [Google Apps Script](https://developers.google.com/apps-script/)
 
@@ -59,3 +61,7 @@ Get the value of `key`
 Delete the value of `key`
 
 > if `key === '*'`, it will **delete everything**
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmaple3142%2Fapps-script-db.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmaple3142%2Fapps-script-db?ref=badge_large)
